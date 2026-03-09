@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  --pixel-display: 'Press Start 2P', monospace;
+  --pixel-ui: 'VT323', monospace;
+  font-family: var(--pixel-ui);
+  line-height: 1.4;
+  font-weight: 400;
+  color: #ebf2f6;
+  background-color: #65a8d9;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  position: relative;
+  background:
+    linear-gradient(to bottom, rgba(33, 74, 113, 0.18), rgba(8, 18, 32, 0.68)),
+    url('/pixel-sky-bg.svg');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 50%, rgba(0, 0, 0, 0.08) 50%);
+  background-size: 100% 4px;
+  opacity: 0.3;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+select {
+  font: inherit;
+}
